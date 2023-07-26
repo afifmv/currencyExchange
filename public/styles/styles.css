@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+.banner {
+  background-image: url("../images/banner.svg");
+  height: 38rem;
+}
+
+.banner > p {
+  width: 30rem;
+  position: relative;
+  left: 34%;
+  top: 40%;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.display-buttons-container {
+  background: #eaf4f4;
+  height: 20rem;
+}
+
+.display-buttons-container > h2 {
+  width: fit-content;
+  position: relative;
+  left: 41.5%;
+  font-family: "Fjalla One", sans-serif;
+  padding-top: 30px;
+}
+
+.display-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.currency-exchange-view-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.banner > p > a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 0px 3px 5px black;
+}

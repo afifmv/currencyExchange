@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <%- include('partials/header.ejs') %>
+    <div class="banner">
+      <p class="hidden">
+        This website will help you to understand the value and power of the
+        currency you hold. Currently, the website assists in three currencies
+        but will include more in the near future. Please feel free to check my
+        <a href="https://afifmv.github.io/html-portfolio/">GITHUB</a> for more
+        other projects.
+      </p>
+    </div>
+    <div class="container-fluid display-buttons-container">
+      <h2>Conversions offered</h2>
+      <div class="display-card-container">
+        <% currencySupported.forEach((currency) => { %>
+        <div
+          class="card text-center mb-3"
+          style="width: 14rem; margin-top: 20px; background-color: #a4c3b2"
+        >
+          <div class="card-body">
+            <h5 class="card-title"><%= currency.name %></h5>
+            <p class="card-text"><%= currency.description %></p>
+            <a
+              href="<%= currency.name.toLowerCase() %>"
+              class="btn"
+              style="background-color: #6b9080"
+              >View Conversions</a
+            >
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+
+    <script src="javascript/animation.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
